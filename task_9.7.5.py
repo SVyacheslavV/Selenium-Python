@@ -19,10 +19,10 @@ with webdriver.Chrome() as browser:  # Инициализация драйвер
     # ожидаем пока элемент с id='old-result' станет видимым и сохраняем его в переменную
     element = wait.until(EC.visibility_of_element_located((By.ID, 'old-result')))
 
-    wait.until(EC.staleness_of(element))
+    wait.until(EC.staleness_of(element)) # ждём когда переменная исчезнет из DOM
     time.sleep(0.3)  # делаем паузу для наглядности
 
-    # ждём когда переменная исчезнет из DOM
+    # ждём когда кнопка с id='secret-button' станет кликабельной и кликаем её
     wait.until(EC.element_to_be_clickable((By.ID, 'secret-button'))).click()
     time.sleep(0.3)  # делаем паузу для наглядности
 
