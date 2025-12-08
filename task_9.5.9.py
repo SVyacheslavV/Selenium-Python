@@ -20,7 +20,13 @@ with webdriver.Chrome() as browser:  # Инициализация драйвер
     goods = wait.until(EC.visibility_of_all_elements_located(locator))
 
     # находим сумму стоимостей всех элементов ($ удаляем срезом)
-    total = sum([int(good.find_element(By.CLASS_NAME, 'price').text[1:]) for good in goods])
+    # total = sum([int(good.find_element(By.CLASS_NAME, 'price').text[1:]) for good in goods])
+
+    # находим сумму стоимостей всех элементов ($ с помощью replace)
+    # total = sum([int(good.find_element(By.CLASS_NAME, 'price').text.replace('$', '')) for good in goods])
+
+    # находим сумму стоимостей всех элементов ($ с помощью strip)
+    total = sum([int(good.find_element(By.CLASS_NAME, 'price').text.strip('$')) for good in goods])
 
     # вставляем сумму в элемент с id='sumInput'
     browser.find_element(By.ID, 'sumInput').send_keys(total)
