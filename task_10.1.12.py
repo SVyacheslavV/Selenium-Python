@@ -28,7 +28,7 @@ with webdriver.Chrome(options=options_chrome) as browser: # Инициализа
 
     for ball in balls: # перебираем элементы которые нужно перенести
 
-        # получаем цвет элемента который нужно перенести
+        # получаем расстояние из атрибута 'id' на которое нужно перенести
         distance_ball = int(ball.get_attribute('id').split('_')[1])
 
         # переносим на расстояние полученное из атрибута 'id'
