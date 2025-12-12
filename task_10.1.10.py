@@ -33,10 +33,10 @@ with webdriver.Chrome(options=options_chrome) as browser:  # Инициализ�
     # for i in range(0, len(elements), 2):
     #     element = elements[i] # элемент который нужно перенести
 
-    # target = elements[i+1] #  элемент куда нужно перенести
+        # target = elements[i+1] #  элемент куда нужно перенести
 
-    # actions.drag_and_drop(element, target).perform()  # Выполняем действие перетаскивания
-    # actions.click_and_hold(element).move_to_element(target).release().perform()
+        # actions.drag_and_drop(element, target).perform()  # Выполняем действие перетаскивания
+        # actions.click_and_hold(element).move_to_element(target).release().perform()
 
     # ожидаем когда элемент с id='message' станет видимым и получаем из него пароль
     # password = wait.until(EC.visibility_of_element_located((By.ID, 'message'))).text
