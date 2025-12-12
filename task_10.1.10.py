@@ -54,8 +54,8 @@ with webdriver.Chrome(options=options_chrome) as browser:  # Инициализ�
 
     # for element, target in zip(elements, targets):
 
-    # переносим элемент
-    # actions.click_and_hold(element).move_to_element(target).release().perform()
+        # переносим элемент
+        # actions.click_and_hold(element).move_to_element(target).release().perform()
 
     # ожидаем когда найдётся текст в элементе id='message'
     # wait.until(lambda driver: browser.find_element(By.ID, 'message').text.strip() != '')
